@@ -14,7 +14,7 @@ from ApplicationData import ApplicationData
 
 class Ui_Form(object):
     def setupUi(self, Form):
-        Form.setObjectName("Form")
+        Form.setObjectName("ЕГЭ Русский язык №4")
         Form.resize(439, 340)
         self.tabWidget = QtWidgets.QTabWidget(Form)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 441, 341))
@@ -22,50 +22,50 @@ class Ui_Form(object):
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.lbl_1 = QtWidgets.QLabel(self.tab)
-        self.lbl_1.setGeometry(QtCore.QRect(0, 40, 21, 20))
+        self.lbl_1.setGeometry(QtCore.QRect(20, 70, 21, 20))
         self.lbl_1.setObjectName("lbl_1")
         self.lbl_2 = QtWidgets.QLabel(self.tab)
-        self.lbl_2.setGeometry(QtCore.QRect(0, 60, 21, 20))
+        self.lbl_2.setGeometry(QtCore.QRect(20, 90, 21, 20))
         self.lbl_2.setObjectName("lbl_2")
         self.lbl_3 = QtWidgets.QLabel(self.tab)
-        self.lbl_3.setGeometry(QtCore.QRect(0, 80, 21, 20))
+        self.lbl_3.setGeometry(QtCore.QRect(20, 110, 21, 20))
         self.lbl_3.setObjectName("lbl_3")
         self.lbl_4 = QtWidgets.QLabel(self.tab)
-        self.lbl_4.setGeometry(QtCore.QRect(0, 100, 21, 20))
+        self.lbl_4.setGeometry(QtCore.QRect(20, 130, 21, 20))
         self.lbl_4.setObjectName("lbl_4")
         self.label_ans = QtWidgets.QLabel(self.tab)
-        self.label_ans.setGeometry(QtCore.QRect(0, 140, 161, 61))
+        self.label_ans.setGeometry(QtCore.QRect(90, 270, 161, 61))
         self.label_ans.setText("")
         self.label_ans.setObjectName("label_ans")
         self.lbl_5 = QtWidgets.QLabel(self.tab)
-        self.lbl_5.setGeometry(QtCore.QRect(0, 120, 21, 20))
+        self.lbl_5.setGeometry(QtCore.QRect(20, 150, 21, 20))
         self.lbl_5.setObjectName("lbl_5")
         self.btn_cont = QtWidgets.QPushButton(self.tab)
-        self.btn_cont.setGeometry(QtCore.QRect(10, 200, 75, 21))
+        self.btn_cont.setGeometry(QtCore.QRect(10, 280, 75, 21))
         self.btn_cont.setObjectName("btn_cont")
         self.lbl1 = QtWidgets.QLabel(self.tab)
-        self.lbl1.setGeometry(QtCore.QRect(20, 40, 91, 20))
+        self.lbl1.setGeometry(QtCore.QRect(40, 70, 91, 20))
         self.lbl1.setObjectName("lbl1")
         self.lbl2 = QtWidgets.QLabel(self.tab)
-        self.lbl2.setGeometry(QtCore.QRect(20, 60, 91, 20))
+        self.lbl2.setGeometry(QtCore.QRect(40, 90, 91, 20))
         self.lbl2.setObjectName("lbl2")
         self.lbl3 = QtWidgets.QLabel(self.tab)
-        self.lbl3.setGeometry(QtCore.QRect(20, 80, 91, 20))
+        self.lbl3.setGeometry(QtCore.QRect(40, 110, 91, 20))
         self.lbl3.setObjectName("lbl3")
         self.lbl4 = QtWidgets.QLabel(self.tab)
-        self.lbl4.setGeometry(QtCore.QRect(20, 100, 91, 20))
+        self.lbl4.setGeometry(QtCore.QRect(40, 130, 91, 20))
         self.lbl4.setObjectName("lbl4")
         self.lbl5 = QtWidgets.QLabel(self.tab)
-        self.lbl5.setGeometry(QtCore.QRect(20, 120, 91, 20))
+        self.lbl5.setGeometry(QtCore.QRect(40, 150, 91, 20))
         self.lbl5.setObjectName("lbl5")
         self.acw = QtWidgets.QLineEdit(self.tab)
-        self.acw.setGeometry(QtCore.QRect(100, 120, 113, 20))
+        self.acw.setGeometry(QtCore.QRect(250, 280, 113, 20))
         self.acw.setObjectName("acw")
         self.Vvod = QtWidgets.QLabel(self.tab)
-        self.Vvod.setGeometry(QtCore.QRect(100, 90, 151, 31))
+        self.Vvod.setGeometry(QtCore.QRect(250, 240, 151, 31))
         self.Vvod.setObjectName("Vvod")
         self.info = QtWidgets.QLabel(self.tab)
-        self.info.setGeometry(QtCore.QRect(0, 10, 211, 31))
+        self.info.setGeometry(QtCore.QRect(10, 10, 301, 31))
         font = QtGui.QFont()
         font.setBold(False)
         font.setItalic(False)
@@ -81,7 +81,7 @@ class Ui_Form(object):
         self.info.setWordWrap(True)
         self.info.setObjectName("info")
         self.pushButton = QtWidgets.QPushButton(self.tab)
-        self.pushButton.setGeometry(QtCore.QRect(220, 120, 61, 20))
+        self.pushButton.setGeometry(QtCore.QRect(370, 280, 61, 20))
         self.pushButton.setObjectName("pushButton")
         self.tabWidget.addTab(self.tab, "")
         self.Information = QtWidgets.QWidget()
@@ -97,6 +97,7 @@ class Ui_Form(object):
 
         self.fullen()
         self.cont()
+        self.kn()
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -113,7 +114,7 @@ class Ui_Form(object):
         self.lbl4.setText(_translate("Form", "TextLabel"))
         self.lbl5.setText(_translate("Form", "TextLabel"))
         self.Vvod.setText(_translate("Form", "Введите ответ:"))
-        self.info.setText(_translate("Form", "Укажите в ответе номер где указано неправильное слово"))
+        self.info.setText(_translate("Form", "В ответе укажите вариант, в котором НЕВЕРНО выделена буква, обозначающая ударный гласный звук"))
         self.pushButton.setText(_translate("Form", "Ответить"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "Практика"))
         self.Information.setToolTip(_translate("Form", "<html><head/><body><p>Информация</p><p><br/></p></body></html>"))
@@ -129,20 +130,26 @@ class Ui_Form(object):
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Для того, чтобы запомнить ударения, рекомендуется выучить правила. Слова нужно учить не вперемешку, а группами, объединенными общим звучанием.</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Information), _translate("Form", "Информация"))
     def fullen(self):
-        pere = ApplicationData
-        pere_keys = [i for i in pere.task_and_response()]
+        self.pere = ApplicationData.task_and_response()
+        pere_keys = self.pere[0]
         self.lbl1.setText(pere_keys[0])
         self.lbl2.setText(pere_keys[1])
         self.lbl3.setText(pere_keys[2])
         self.lbl4.setText(pere_keys[3])
         self.lbl5.setText(pere_keys[4])
+        self.label_ans.setText("")
 
+
+    def kn(self):
+        self.pushButton.clicked.connect(self.ans)
     def cont(self):
         self.btn_cont.clicked.connect(self.fullen)
 
     def ans(self):
-        self.pushButton.clicked
-        ...
+        if str(self.acw.text()) != str(self.pere[1]):
+            self.label_ans.setText("Неверно(")
+        else:
+            self.label_ans.setText("Правильно!!!")
 
 
 if __name__ == "__main__":

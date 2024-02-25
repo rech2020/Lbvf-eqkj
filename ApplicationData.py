@@ -72,19 +72,21 @@ class ApplicationData:
             keys = set()
             task = []
             answers = []
-            counter = 0
+            counter = all_counter = 0
             for word_hash_key in task_hashes:
                 word_info = all_words[word_hash_key]
+                all_counter += 1
                 if word_info[1]:
                     answers.append("")
                     counter += 1
                 else:
-                    answers.append(word_info[0])
+                    answers.append(str(all_counter))
+                    false_word = word_info[0]
                 task.append(word_info[0])
                 keys.add(word_info[0].lower())
             if counter == 4 and len(keys) == 5:
                 break
-        return dict(zip(task, answers))
+        return [task, int(''.join(answers)), false_word]
 
 
 x = ApplicationData.task_and_response()
