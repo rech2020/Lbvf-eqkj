@@ -1,5 +1,7 @@
 # Project files
 Ударения.txt
+platforms/
+plugins/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
