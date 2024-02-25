@@ -140,6 +140,10 @@ class Ui_Form(object):
     def cont(self):
         self.btn_cont.clicked.connect(self.fullen)
 
+    def ans(self):
+        self.pushButton.clicked
+        ...
+
 
 if __name__ == "__main__":
     import sys
