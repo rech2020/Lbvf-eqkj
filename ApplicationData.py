@@ -76,19 +76,20 @@ class ApplicationData:
             for word_hash_key in task_hashes:
                 word_info = all_words[word_hash_key]
                 if word_info[1]:
-                    answers.append(word_info[0] + '\n')
+                    answers.append("")
                     counter += 1
                 else:
-                    answers.append("")
+                    answers.append(word_info[0])
                 task.append(word_info[0])
                 keys.add(word_info[0].lower())
-            if (0 < counter < 5) and len(keys) == 5:
+            if counter == 4 and len(keys) == 5:
                 break
         return dict(zip(task, answers))
 
 
-'''x = application_data.task_and_response(application_data)
-print(f'Task №1: {", ".join(i[0] for i in x)}')
+x = ApplicationData.task_and_response()
+#print(x)
+'''print(f'Task №1: {", ".join(i[0] for i in x)}')
 print('Answer:')
 for i in x:
     if i[1] != "":
